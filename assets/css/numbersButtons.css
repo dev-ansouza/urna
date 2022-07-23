@@ -1,0 +1,63 @@
+.urna div.window-right .numbers .span {
+    margin: 20px;
+}
+
+/* Button Numbers */
+.urna div.window-right .numbers .span .button-nunber {
+    height: 60px;
+    width: 90px;
+    background-color: #444444;
+    font-size: 20px;
+    position:relative;
+    border: #444444;
+    margin: 7px;
+    font-size: 20px;
+}
+
+.urna div.window-right .numbers .span .button-nunber a{
+    color:white;
+    font-family:Helvetica, sans-serif;
+    font-weight:bold;
+    font-size:20px;
+    text-decoration:none;
+    background-color:black;
+    display:block;
+    position:relative;
+    padding:20px 0;
+
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    text-shadow: 0px 1px 0px #000;
+    filter: dropshadow(color=#000, offx=0px, offy=1px);
+
+    -webkit-box-shadow:inset 0 1px 0 #272727, 0 10px 0 #272727;
+    -moz-box-shadow:inset 0 1px 0 #272727, 0 10px 0 #272727;
+    box-shadow:inset 0 1px 0 #272727, 0 6px 0 #272727;
+
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+  
+.urna div.window-right .numbers .span .button-nunber a:active{
+    top:10px;
+    background-color:black;
+
+    -webkit-box-shadow:inset 0 1px 0 #272727, inset 0 -3px 0 #272727;
+    -moz-box-shadow:inset 0 1px 0 #272727, inset 0 -3px 0 #272727;
+    box-shadow:inset 0 1px 0 #272727, inset 0 -3px 0 #272727;
+}
+  
+.urna div.window-right .numbers .span .button-nunber:after{
+    content:"";
+    height:100%;
+    width:100%;
+    padding:4px;
+    position: absolute;
+    bottom:-15px;
+    left:-4px;
+    z-index:-1;
+    background-color:#2B1800;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}

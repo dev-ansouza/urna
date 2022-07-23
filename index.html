@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Urna</title>
     <link rel="stylesheet" href="/assets/css/style.css"></link>
+    <link rel="stylesheet" href="/assets/css/numbersButtons.css"></link>
+    <link rel="stylesheet" href="/assets/css/confirmationsButtons.css"></link>
 </head>
 <body>
 
@@ -19,41 +21,39 @@
 
             <div class="numbers">
                 <span class="span">
-                    <button class="button">1</button>
-                    <button class="button">2</button>
-                    <button class="button">3</button>
+                    <button class="button-nunber" onclick="sound_play(1)"><a>1</a></button>
+                    <button class="button-nunber" onclick="sound_play(1)"><a>2</a></button>
+                    <button class="button-nunber" onclick="sound_play(1)"><a>3</a></button>
                 </span>
 
                 <span class="span">
-                    <button class="button">4</button>
-                    <button class="button">5</button>
-                    <button class="button">6</button>
+                    <button class="button-nunber" onclick="sound_play(1)"><a>4</a></button>
+                    <button class="button-nunber" onclick="sound_play(1)"><a>5</a></button>
+                    <button class="button-nunber" onclick="sound_play(1)"><a>6</a></button>
                 </span>
 
                 <span class="span">
-                    <button class="button">7</button>
-                    <button class="button">8</button>
-                    <button class="button">9</button>
+                    <button class="button-nunber" onclick="sound_play(1)"><a>7</a></button>
+                    <button class="button-nunber" onclick="sound_play(1)"><a>8</a></button>
+                    <button class="button-nunber" onclick="sound_play(1)"><a>9</a></button>
                 </span>
 
                 <span class="span">
-                    <button class="button" style="margin-left: 30%;">0</button>
+                    <button class="button-nunber" style="margin-left: 33%;" onclick="sound_play(1)"><a>0</a></button>
                 </span>
             </div>
             
-            <div class="confirmations">
-
-                <span class="">
-                    <button class="button-white">BRANCO</button>
-                    <button class="button-orange">CORRIGE</button>
-                    <button class="button-green">CONFIRMA</button>
-                </span>
-    
+            <div class="confirmations" ontouchstart="">
+                    <button class="button-confirmation-white" onclick="sound_play(null, 1)"><a>BRANCO</a></button>
+                    <button class="button-confirmation-orange" onclick="sound_play(1)"><a>CORRIGE</a></button>
+                    <button class="button-confirmation-green" onclick="sound_play(null, 1)"><a>CONFIRMA</a></button>
             </div>
 
         </div>
 
     </div>
+
+    <script src="/assets/js/script.js"></script>
 
 </body>
 </html>
