@@ -8,45 +8,67 @@
     <link rel="stylesheet" href="/assets/css/style.css"></link>
     <link rel="stylesheet" href="/assets/css/numbersButtons.css"></link>
     <link rel="stylesheet" href="/assets/css/confirmationsButtons.css"></link>
+    <link rel="stylesheet" href="/assets/css/window.css"></link>
 </head>
 <body>
 
     <div class="urna">
         
         <div class="window-left">
-            
+            <div class="window">
+
+                <div class="div-president">
+                    <p class="president">Presidente</p>
+                </div>
+                <div class="data">
+                    <div class="info">
+                        <p class="info-item">Número: </p>
+                        <p class="info-item">Nome: </p>
+                        <p class="info-item">Partido: </p>
+                    </div>
+                    <div class="info-res">
+                        <div class="info-item-res" ><span class="info-item-res-number"> <span id="number"></span></span></div>
+                        <div class="info-item-res" ><span id="name"></span></div>
+                        <div class="info-item-res" ><span id="party"></span></div>
+                    </div>
+                    <div class="photo">
+                        <img src="/assets/img/president-cat.jpg" alt="Girl in a jacket" width="150" height="150">
+                    </div>
+                </div>
+                
+            </div>
         </div>
 
         <div class="window-right">
 
             <div class="numbers">
                 <span class="span">
-                    <button class="button-nunber" onclick="sound_play(1)"><a>1</a></button>
-                    <button class="button-nunber" onclick="sound_play(1)"><a>2</a></button>
-                    <button class="button-nunber" onclick="sound_play(1)"><a>3</a></button>
+                    <button class="button-nunber" onclick="sound_play(1); insert(1)"><a>1</a></button>
+                    <button class="button-nunber" onclick="sound_play(1); insert(2)"><a>2</a></button>
+                    <button class="button-nunber" onclick="sound_play(1); insert(3)"><a>3</a></button>
                 </span>
 
                 <span class="span">
-                    <button class="button-nunber" onclick="sound_play(1)"><a>4</a></button>
-                    <button class="button-nunber" onclick="sound_play(1)"><a>5</a></button>
-                    <button class="button-nunber" onclick="sound_play(1)"><a>6</a></button>
+                    <button class="button-nunber" onclick="sound_play(1); insert(4)"><a>4</a></button>
+                    <button class="button-nunber" onclick="sound_play(1); insert(5)"><a>5</a></button>
+                    <button class="button-nunber" onclick="sound_play(1); insert(6)"><a>6</a></button>
                 </span>
 
                 <span class="span">
-                    <button class="button-nunber" onclick="sound_play(1)"><a>7</a></button>
-                    <button class="button-nunber" onclick="sound_play(1)"><a>8</a></button>
-                    <button class="button-nunber" onclick="sound_play(1)"><a>9</a></button>
+                    <button class="button-nunber" onclick="sound_play(1); insert(7)"><a>7</a></button>
+                    <button class="button-nunber" onclick="sound_play(1); insert(8)"><a>8</a></button>
+                    <button class="button-nunber" onclick="sound_play(1); insert(9)"><a>9</a></button>
                 </span>
 
                 <span class="span">
-                    <button class="button-nunber" style="margin-left: 33%;" onclick="sound_play(1)"><a>0</a></button>
+                    <button class="button-nunber" style="margin-left: 33%;" onclick="sound_play(1); insert(0)"><a>0</a></button>
                 </span>
             </div>
             
             <div class="confirmations" ontouchstart="">
-                    <button class="button-confirmation-white" onclick="sound_play(null, 1)"><a>BRANCO</a></button>
-                    <button class="button-confirmation-orange" onclick="sound_play(1)"><a>CORRIGE</a></button>
-                    <button class="button-confirmation-green" onclick="sound_play(null, 1)"><a>CONFIRMA</a></button>
+                    <button class="button-confirmation-white" onclick="sound_play(2)"><a>BRANCO</a></button>
+                    <button class="button-confirmation-orange" onclick="sound_play(1); fixContent()"><a>CORRIGE</a></button>
+                    <button class="button-confirmation-green" onclick="sound_play(2)"><a>CONFIRMA</a></button>
             </div>
 
         </div>

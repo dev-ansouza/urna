@@ -23,7 +23,7 @@ body {
     margin: 40px;
     height: 420px;
     width: 600px;
-    background-color: black;
+    background: linear-gradient(64deg, rgb(142, 158, 172), rgb(155, 182, 209));
 }
 
 .urna div.window-right {

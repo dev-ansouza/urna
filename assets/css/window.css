@@ -1,0 +1,51 @@
+.urna .window-left .window .div-president {
+    margin-bottom: 10px;
+}
+
+.urna .window-left .window .div-president .president {
+    font-size: 40px;
+    font: bold;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.urna .window-left .window .data {
+    width: 500px;
+    height: 300px;
+    display: flex;
+    margin-top: 50px;
+}
+
+.urna .window-left .window .data .info {
+    margin: 10px 0 10px 0;
+    width: 125px;
+}
+
+.urna .window-left .window .data .info-item {
+    font-size: 25px;
+    font: bold;
+    margin: 20px;
+}
+
+.urna .window-left .window .data .info-res {
+    margin: 10px 0 10px 50px;
+    width: 125px;
+}
+
+.urna .window-left .window .data .info-item-res {
+    font-size: 30px;
+    font: bold;
+    padding-top: 20px;
+}
+
+/* .urna .window-left .window .data .info-item-res .info-item-res-number {
+    border: 1px solid;
+} */
+
+.urna .window-left .window .data .photo {
+    font-size: 20px;
+    margin: 10px 0 10px 100px;
+    height: 250px;
+}
