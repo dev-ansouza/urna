@@ -1,13 +1,13 @@
 .urna div.window-right .confirmations {
-    margin: 10px;
+    margin: 20px;
 }
 
 /* Button confirmation white */
 .urna div.window-right .confirmations .button-confirmation-white {
     height: 40px;
-    width: 94px;
+    width: 90px;
     background-color: #444444;
-    font-size: 20px;
+    font-size: 18px;
     position:relative;
     border: #444444;
 }
@@ -16,7 +16,7 @@
     color:black;
     font-family:Helvetica, sans-serif;
     font-weight:bold;
-    font-size:20px;
+    font-size:18px;
     text-decoration:none;
     background-color:white;
     display:block;
@@ -63,9 +63,9 @@
 /* Button confirmation orange */
 .urna div.window-right .confirmations .button-confirmation-orange {
     height: 40px;
-    width: 100px;
+    width: 90px;
     background-color: #444444;
-    font-size: 20px;
+    font-size: 18px;
     position:relative;
     border: #444444;
 }
@@ -74,7 +74,7 @@
     color:black;
     font-family:Helvetica, sans-serif;
     font-weight:bold;
-    font-size:20px;
+    font-size:18px;
     text-decoration:none;
     background-color:#FFA12B;
     display:block;
@@ -132,7 +132,7 @@
     color:black;
     font-family:Helvetica, sans-serif;
     font-weight:bold;
-    font-size:22px;
+    font-size:20px;
     text-decoration:none;
     background-color:green;
     display:block;
