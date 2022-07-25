@@ -89,10 +89,10 @@ function populateLocalStorage() {
 
     //Array of data
     const data = [
-        {'number': '11', 'name': 'Joe', 'party' : 'PCL', 'photo_path': "/assets/img/president-joe.jpg"},
-        {'number' : '12', 'name' : 'Duo', 'party' : 'PCR', 'photo_path': "/assets/img/president-Duo.jpg"},
-        {'number' : '13', 'name' : 'Jhonson', 'party' : 'PD', 'photo_path': "/assets/img/president-jhonson.jpg"},
-        {'number' : '14', 'name' : 'Bidu', 'party' : 'BR', 'photo_path': "/assets/img/president-bidu.jpg"}
+        {'number': '11', 'name': 'Joe', 'party' : 'PCL', 'photo_path': "/urna/assets/img/president-joe.jpg"},
+        {'number' : '12', 'name' : 'Duo', 'party' : 'PCR', 'photo_path': "/urna/assets/img/president-Duo.jpg"},
+        {'number' : '13', 'name' : 'Jhonson', 'party' : 'PD', 'photo_path': "/urna/assets/img/president-jhonson.jpg"},
+        {'number' : '14', 'name' : 'Bidu', 'party' : 'BR', 'photo_path': "/urna/assets/img/president-bidu.jpg"}
     ];
 
     //For each item of const data, save in localStorage
