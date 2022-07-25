@@ -7,8 +7,11 @@ const sound = new Audio();
 //Constants
 const window_start = document.getElementById('window-start');
 const window_end = document.getElementById('window-end');
+const number_title = document.getElementById('number_title');
 const name_title = document.getElementById('name_title');
 const party_title = document.getElementById('party_title');
+const div_first_number = document.getElementById('div-first-number');
+const div_second_number = document.getElementById('div-second-number');
 const first_number = document.getElementById('first-number');
 const second_number = document.getElementById('second-number');
 const name = document.getElementById('name');
@@ -17,6 +20,7 @@ const photo = document.getElementById('photo');
 const footer_info = document.getElementById('window-left-footer-info');
 const footer_invalid_candidate = document.getElementById('window-left-footer-invalid-candidate');
 const footer_null_footer = document.getElementById('window-left-footer-null-vote');
+const footer_white_footer = document.getElementById('window-left-footer-white-vote');
 
 //Play the sound after touching the key
 function sound_play(res) {
@@ -52,18 +56,22 @@ function insert(res){
 
             name.textContent = candidate['name'];
             party.textContent = candidate['party'];
+            photo.style["display"] = "";
             photo.src = candidate['photo_path']
         //If cadidate is null, candidate is invalid...
         } else {
-            
+            //If number of cadidate is "00", show footer_null_footer
             if (first_number.textContent + second_number.textContent == 00) {
                 footer_info.style["display"] = "none";
                 footer_invalid_candidate.style["display"] = "none";
                 footer_null_footer.style["display"] = "";
+                footer_white_footer.style["display"] = "none";
+            //Case different, show footer_invalid_candidate
             } else {
                 footer_info.style["display"] = "none";
                 footer_invalid_candidate.style["display"] = "";
                 footer_null_footer.style["display"] = "none";
+                footer_white_footer.style["display"] = "none";
             }
 
         }
@@ -80,13 +88,18 @@ function fixContent() {
     party.textContent = "";
 
     //Set display style to none
+    number_title.style['display'] = "";
     name_title.style['display'] = "none";
     party_title.style['display'] = "none";
+    div_first_number.style['display'] = "";
+    div_second_number.style['display'] = "";
     name.style['display'] = "none";
     party.style['display'] = "none";
     footer_info.style["display"] = "";
     footer_invalid_candidate.style["display"] = "none";
     footer_null_footer.style["display"] = "none";
+    footer_white_footer.style["display"] = "none";
+    photo.style["display"] = "none";
 
     //Set value of source to empty
     photo.src = " ";
@@ -122,6 +135,7 @@ function getCandidate(number) {
     }
 }
 
+//Confirm vote
 function confirmVote() {
 
     if(first_number.textContent !== ""){
@@ -139,4 +153,19 @@ function confirmVote() {
             }, 5000);
         }
     }
+}
+
+//White vote
+function whiteVote(){
+    //Set textContent and style[display]
+    first_number.textContent = 0;
+    second_number.textContent = 0;
+    number_title.style['display'] = "none";
+    div_first_number.style['display'] = "none";
+    div_second_number.style['display'] = "none";
+    footer_info.style["display"] = "none";
+    footer_invalid_candidate.style["display"] = "none";
+    footer_null_footer.style["display"] = "none";
+    footer_white_footer.style["display"] = "";
+    
 }

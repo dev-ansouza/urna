@@ -19,16 +19,16 @@
                 </div>
                 <div class="data">
                     <div class="info">
-                        <p class="info-item">Número: </p>
+                        <p class="info-item" id="number_title" style="display: '';">Número: </p>
                         <p class="info-item" id="name_title" style="display: none;">Nome: </p>
                         <p class="info-item" id="party_title" style="display: none;">Partido: </p>
                     </div>
                     <div class="info-res">
                         <div class="info-item-res" >
-                            <div class="first-number">
+                            <div id="div-first-number" class="first-number" style="display: '';">
                                 <span id="first-number"></span>
                             </div>
-                            <div class="second-number">
+                            <div id="div-second-number" class="second-number" style="display: '';">
                                 <span id="second-number"></span>
                             </div>
                         </div>
@@ -36,7 +36,7 @@
                         <div class="info-item-res" ><span id="party"></span></div>
                     </div>
                     <div class="photo">
-                        <img id="photo" width="150" height="150" class="photo-img">
+                        <img id="photo" width="150" height="150" class="photo-img" style="display: none;">
                     </div>
                 </div>
                 <div id="window-left-footer-info" class="footer">
@@ -55,6 +55,9 @@
                 </div>
                 <div id="window-left-footer-null-vote" class="footer" style="display: none;">
                     <p class="footer-null-vote">Voto Nulo</p>
+                </div>
+                <div id="window-left-footer-white-vote" class="footer" style="display: none;">
+                    <p class="footer-white-vote">Voto em Branco</p>
                 </div>
             </div>
             <div id="window-end" class="window-end" style="display: none;">
@@ -84,7 +87,7 @@
                 </span>
             </div>
             <div class="confirmations" ontouchstart="">
-                    <button class="button-confirmation-white" onclick="sound_play(1)"><a>BRANCO</a></button>
+                    <button class="button-confirmation-white" onclick="sound_play(1); whiteVote()"><a>BRANCO</a></button>
                     <button class="button-confirmation-orange" onclick="sound_play(1); fixContent()"><a>CORRIGE</a></button>
                     <button class="button-confirmation-green" onclick="sound_play(2); confirmVote()"><a>CONFIRMA</a></button>
             </div>
