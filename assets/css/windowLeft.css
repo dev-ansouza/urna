@@ -20,7 +20,7 @@
 
 .urna .window-left .window .data .info {
     margin: 10px 0 10px 0;
-    width: 125px;
+    width: 110px;
 }
 
 .urna .window-left .window .data .info-item {
@@ -31,17 +31,41 @@
 
 .urna .window-left .window .data .info-res {
     margin: 10px 0 10px 30px;
-    width: 125px;
 }
 
 .urna .window-left .window .data .info-item-res {
     font-size: 25px;
     font: bold;
-    padding-top: 20px;
+    padding-top: 17px;
+    width: 120px;
+}
+
+.urna .window-left .window .data .info-item-res .first-number {
+    border: 1px solid;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 4px;
+    height: 30px;
+    width: 12px;
+    max-height: 3;
+    display: inline-block;
+    position: absolute;
+}
+
+.urna .window-left .window .data .info-item-res .second-number {
+    border: 1px solid;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 4px;
+    height: 30px;
+    width: 12px;
+    margin-left: 29%;
+    display: inline-block;
 }
 
 .urna .window-left .window .data .photo {
     font-size: 20px;
     margin: 10px 0 10px 100px;
     height: 250px;
+    width: 200px;
 }

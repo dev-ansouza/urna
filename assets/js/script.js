@@ -17,66 +17,68 @@ function sound_play(res) {
 
 //Insert number
 function insert(res){
+
+    //Constants
     const name_title = document.getElementById('name_title');
     const party_title = document.getElementById('party_title');
-
-    const number = document.getElementById('number');
+    const first_number = document.getElementById('first-number');
+    const second_number = document.getElementById('second-number');
     const name = document.getElementById('name');
     const party = document.getElementById('party');
     const photo = document.getElementById('photo');
 
-    if(number.textContent.length < 2 ){
+    //Verify if first_number is filled
+    if (first_number.textContent.length < 1) {
+        first_number.textContent = res;
+    //Verify if second_number is filled
+    } else if (second_number.textContent.length < 1 ) {
+        second_number.textContent = res;
 
-        number.textContent = number.textContent + res;
-        number.style["border"] = "1px solid"
+        //After fill second_number, get candidate for view in the window
+        let candidate = getCandidate(first_number.textContent + res);
 
-        if (number.textContent.length == 2 ) {
-            let candidate = getCandidate(number.textContent);
+        //If candidate is different of "null"
+        if (candidate !== 'null') {
+            name_title.style['display'] = "";
+            party_title.style['display'] = "";
+            name.style['display'] = "";
+            party.style['display'] = "";
+            photo.style["display"] = "";
 
-            console.log(candidate);
-
-            if (candidate !== 'null') {
-
-                name_title.style['display'] = "";
-                party_title.style['display'] = "";
-                name.style['display'] = "";
-                party.style['display'] = "";
-                photo.style["display"] = "";
-
-                name.textContent = candidate['name'];
-                party.textContent = candidate['party'];
-
-                photo.src = candidate['photo_path']
-            } else {
-
-            }
-            
-        }
+            name.textContent = candidate['name'];
+            party.textContent = candidate['party'];
+            photo.src = candidate['photo_path']
+        } 
     }
 }
 
 //Clear numbers of the left window
 function fixContent() {
+
+    //Constants
     const name_title = document.getElementById('name_title');
     const party_title = document.getElementById('party_title');
-    const number = document.getElementById('number');
+    const first_number = document.getElementById('first-number');
+    const second_number = document.getElementById('second-number');
     const name = document.getElementById('name');
     const party = document.getElementById('party');
     const photo = document.getElementById('photo');
-
-    number.textContent = "";
+    
+    //Set value to empty
+    first_number.textContent = "";
+    second_number.textContent = "";
     name.textContent = "";
     party.textContent = "";
 
+    //Set display style to none
     name_title.style['display'] = "none";
     party_title.style['display'] = "none";
     name.style['display'] = "none";
     party.style['display'] = "none";
     photo.style["display"] = "none";
-    
-    photo.src = "";
-    number.style["border"] = "0px";
 
+    //Set value of source to empty
+    photo.src = "";
 }
 
 //Populate local storage with data
