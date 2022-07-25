@@ -5,23 +5,25 @@
 /* Button confirmation white */
 .urna div.window-right .confirmations .button-confirmation-white {
     height: 40px;
-    width: 90px;
+    width: 80px;
     background-color: #444444;
-    font-size: 18px;
+    font-size: 16px;
     position:relative;
     border: #444444;
+    margin-left: 5%;
+    margin-right: -5%;
 }
 
 .urna div.window-right .confirmations .button-confirmation-white a{
     color:black;
     font-family:Helvetica, sans-serif;
     font-weight:bold;
-    font-size:18px;
+    font-size:14px;
     text-decoration:none;
     background-color:white;
     display:block;
     position:relative;
-    padding:20px 0;
+    padding:14px 0;
 
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     text-shadow: 0px 1px 0px #000;
@@ -63,23 +65,24 @@
 /* Button confirmation orange */
 .urna div.window-right .confirmations .button-confirmation-orange {
     height: 40px;
-    width: 90px;
+    width: 80px;
     background-color: #444444;
     font-size: 18px;
     position:relative;
     border: #444444;
+    margin-left: 11%;
 }
 
 .urna div.window-right .confirmations .button-confirmation-orange a{
     color:black;
     font-family:Helvetica, sans-serif;
     font-weight:bold;
-    font-size:18px;
+    font-size:14px;
     text-decoration:none;
     background-color:#FFA12B;
     display:block;
     position:relative;
-    padding:20px 0;
+    padding:15px 0;
 
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     text-shadow: 0px 1px 0px #000;
@@ -121,23 +124,24 @@
 /* Button confirmation green */
 .urna div.window-right .confirmations .button-confirmation-green {
     height: 50px;
-    width: 120px;
+    width: 90px;
     background-color: #444444;
-    font-size: 20px;
+    font-size: 18px;
     position:relative;
     border: #444444;
+    margin-left: 5%;
 }
 
 .urna div.window-right .confirmations .button-confirmation-green a{
     color:black;
     font-family:Helvetica, sans-serif;
     font-weight:bold;
-    font-size:20px;
+    font-size:16px;
     text-decoration:none;
     background-color:green;
     display:block;
     position:relative;
-    padding:20px 0;
+    padding:22px 0;
 
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     text-shadow: 0px 1px 0px #000;
