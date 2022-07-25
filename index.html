@@ -11,12 +11,9 @@
     <link rel="stylesheet" href="/urna/assets/css/windowLeft.css"></link>
 </head>
 <body>
-
     <div class="urna">
-        
         <div class="window-left">
-            <div class="window">
-
+            <div id="window-start" class="window">
                 <div class="div-president">
                     <p class="president">Presidente</p>
                 </div>
@@ -59,47 +56,40 @@
                 <div id="window-left-footer-null-vote" class="footer" style="display: none;">
                     <p class="footer-null-vote">Voto Nulo</p>
                 </div>
-                
+            </div>
+            <div id="window-end" class="window-end" style="display: none;">
+                <div class="end">FIM</div>
             </div>
         </div>
 
         <div class="window-right">
-
             <div class="numbers">
                 <span class="span">
                     <button class="button-nunber" onclick="sound_play(1); insert(1)"><a>1</a></button>
                     <button class="button-nunber" onclick="sound_play(1); insert(2)"><a>2</a></button>
                     <button class="button-nunber" onclick="sound_play(1); insert(3)"><a>3</a></button>
                 </span>
-
                 <span class="span">
                     <button class="button-nunber" onclick="sound_play(1); insert(4)"><a>4</a></button>
                     <button class="button-nunber" onclick="sound_play(1); insert(5)"><a>5</a></button>
                     <button class="button-nunber" onclick="sound_play(1); insert(6)"><a>6</a></button>
                 </span>
-
                 <span class="span">
                     <button class="button-nunber" onclick="sound_play(1); insert(7)"><a>7</a></button>
                     <button class="button-nunber" onclick="sound_play(1); insert(8)"><a>8</a></button>
                     <button class="button-nunber" onclick="sound_play(1); insert(9)"><a>9</a></button>
                 </span>
-
                 <span class="span">
                     <button class="button-nunber" style="margin-left: 26%;" onclick="sound_play(1); insert(0)"><a>0</a></button>
                 </span>
             </div>
-            
             <div class="confirmations" ontouchstart="">
-                    <button class="button-confirmation-white" onclick="sound_play(2)"><a>BRANCO</a></button>
+                    <button class="button-confirmation-white" onclick="sound_play(1)"><a>BRANCO</a></button>
                     <button class="button-confirmation-orange" onclick="sound_play(1); fixContent()"><a>CORRIGE</a></button>
-                    <button class="button-confirmation-green" onclick="sound_play(2)"><a>CONFIRMA</a></button>
+                    <button class="button-confirmation-green" onclick="sound_play(2); confirmVote()"><a>CONFIRMA</a></button>
             </div>
-
         </div>
-
     </div>
-
     <script src="/urna/assets/js/script.js"></script>
-
 </body>
 </html>

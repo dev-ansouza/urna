@@ -3,7 +3,7 @@
 }
 
 .urna div.window-right .numbers .span {
-    margin: 16%
+    margin: 16%;
 }
 
 /* Button Numbers */
@@ -16,6 +16,7 @@
     border: #444444;
     margin: 7px;
     font-size: 20px;
+    cursor: pointer
 }
 
 .urna div.window-right .numbers .span .button-nunber a{

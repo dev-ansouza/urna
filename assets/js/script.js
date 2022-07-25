@@ -4,6 +4,20 @@ populateLocalStorage();
 //Instance a new Audio()
 const sound = new Audio();
 
+//Constants
+const window_start = document.getElementById('window-start');
+const window_end = document.getElementById('window-end');
+const name_title = document.getElementById('name_title');
+const party_title = document.getElementById('party_title');
+const first_number = document.getElementById('first-number');
+const second_number = document.getElementById('second-number');
+const name = document.getElementById('name');
+const party = document.getElementById('party');
+const photo = document.getElementById('photo');
+const footer_info = document.getElementById('window-left-footer-info');
+const footer_invalid_candidate = document.getElementById('window-left-footer-invalid-candidate');
+const footer_null_footer = document.getElementById('window-left-footer-null-vote');
+
 //Play the sound after touching the key
 function sound_play(res) {
     if(res != 1){
@@ -17,18 +31,6 @@ function sound_play(res) {
 
 //Insert number
 function insert(res){
-
-    //Constants
-    const name_title = document.getElementById('name_title');
-    const party_title = document.getElementById('party_title');
-    const first_number = document.getElementById('first-number');
-    const second_number = document.getElementById('second-number');
-    const name = document.getElementById('name');
-    const party = document.getElementById('party');
-    const photo = document.getElementById('photo');
-    const footer_info = document.getElementById('window-left-footer-info');
-    const footer_invalid_candidate = document.getElementById('window-left-footer-invalid-candidate');
-    const footer_null_footer = document.getElementById('window-left-footer-null-vote');
 
     //Verify if first_number is filled
     if (first_number.textContent.length < 1) {
@@ -70,18 +72,6 @@ function insert(res){
 
 //Clear numbers of the left window
 function fixContent() {
-
-    //Constants
-    const name_title = document.getElementById('name_title');
-    const party_title = document.getElementById('party_title');
-    const first_number = document.getElementById('first-number');
-    const second_number = document.getElementById('second-number');
-    const name = document.getElementById('name');
-    const party = document.getElementById('party');
-    const photo = document.getElementById('photo');
-    const footer_info = document.getElementById('window-left-footer-info');
-    const footer_invalid_candidate = document.getElementById('window-left-footer-invalid-candidate');
-    const footer_null_footer = document.getElementById('window-left-footer-null-vote');
 
     //Set value to empty
     first_number.textContent = "";
@@ -129,5 +119,24 @@ function getCandidate(number) {
         return candidate;
     } else {
         return 'null';
+    }
+}
+
+function confirmVote() {
+
+    if(first_number.textContent !== ""){
+        if(first_number.textContent + second_number.textContent == 00 || getCandidate(first_number.textContent + second_number.textContent) !== 'null') {
+            
+            //Show the start window 
+            window_start.style['display'] = "none";
+            window_end.style['display'] = ""
+
+            //After 5 seconds, display start window
+            setTimeout ( () => {
+                window_start.style['display'] = "";
+                window_end.style['display'] = "none"
+                fixContent();
+            }, 5000);
+        }
     }
 }

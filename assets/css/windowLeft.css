@@ -104,3 +104,11 @@
     font-weight:lighter;
     font-size: 40px;
 }
+
+.urna .window-left .window-end .end {
+    justify-content: center;
+    text-align: center;
+    font-weight:lighter;
+    font-size: 150px;
+    margin-top: 25%;
+}
