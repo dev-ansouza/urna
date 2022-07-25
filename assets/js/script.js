@@ -26,6 +26,9 @@ function insert(res){
     const name = document.getElementById('name');
     const party = document.getElementById('party');
     const photo = document.getElementById('photo');
+    const footer_info = document.getElementById('window-left-footer-info');
+    const footer_invalid_candidate = document.getElementById('window-left-footer-invalid-candidate');
+    const footer_null_footer = document.getElementById('window-left-footer-null-vote');
 
     //Verify if first_number is filled
     if (first_number.textContent.length < 1) {
@@ -48,7 +51,20 @@ function insert(res){
             name.textContent = candidate['name'];
             party.textContent = candidate['party'];
             photo.src = candidate['photo_path']
-        } 
+        //If cadidate is null, candidate is invalid...
+        } else {
+            
+            if (first_number.textContent + second_number.textContent == 00) {
+                footer_info.style["display"] = "none";
+                footer_invalid_candidate.style["display"] = "none";
+                footer_null_footer.style["display"] = "";
+            } else {
+                footer_info.style["display"] = "none";
+                footer_invalid_candidate.style["display"] = "";
+                footer_null_footer.style["display"] = "none";
+            }
+
+        }
     }
 }
 
@@ -63,7 +79,10 @@ function fixContent() {
     const name = document.getElementById('name');
     const party = document.getElementById('party');
     const photo = document.getElementById('photo');
-    
+    const footer_info = document.getElementById('window-left-footer-info');
+    const footer_invalid_candidate = document.getElementById('window-left-footer-invalid-candidate');
+    const footer_null_footer = document.getElementById('window-left-footer-null-vote');
+
     //Set value to empty
     first_number.textContent = "";
     second_number.textContent = "";
@@ -75,10 +94,12 @@ function fixContent() {
     party_title.style['display'] = "none";
     name.style['display'] = "none";
     party.style['display'] = "none";
-    photo.style["display"] = "none";
+    footer_info.style["display"] = "";
+    footer_invalid_candidate.style["display"] = "none";
+    footer_null_footer.style["display"] = "none";
 
     //Set value of source to empty
-    photo.src = "";
+    photo.src = " ";
 }
 
 //Populate local storage with data
@@ -90,7 +111,7 @@ function populateLocalStorage() {
     //Array of data
     const data = [
         {'number': '11', 'name': 'Joe', 'party' : 'PCL', 'photo_path': "/urna/assets/img/president-joe.jpg"},
-        {'number' : '12', 'name' : 'Duo', 'party' : 'PCR', 'photo_path': "/urna/assets/img/president-Duo.jpg"},
+        {'number' : '12', 'name' : 'Duo', 'party' : 'PCR', 'photo_path': "/urna/assets/img/president-duo.jpg"},
         {'number' : '13', 'name' : 'Jhonson', 'party' : 'PD', 'photo_path': "/urna/assets/img/president-jhonson.jpg"},
         {'number' : '14', 'name' : 'Bidu', 'party' : 'BR', 'photo_path': "/urna/assets/img/president-bidu.jpg"}
     ];

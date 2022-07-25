@@ -4,7 +4,7 @@
 
 .urna .window-left .window .div-president .president {
     font-size: 40px;
-    font: bold;
+    font-weight: bold;
     margin-top: 30px;
     display: flex;
     align-items: center;
@@ -13,7 +13,7 @@
 
 .urna .window-left .window .data {
     width: 500px;
-    height: 300px;
+    height: 200px;
     display: flex;
     margin-top: 50px;
 }
@@ -25,7 +25,7 @@
 
 .urna .window-left .window .data .info-item {
     font-size: 25px;
-    font: bold;
+    font-weight: bold;
     margin: 20px;
 }
 
@@ -35,7 +35,7 @@
 
 .urna .window-left .window .data .info-item-res {
     font-size: 25px;
-    font: bold;
+    font-weight: bold;
     padding-top: 17px;
     width: 120px;
 }
@@ -68,4 +68,39 @@
     margin: 10px 0 10px 100px;
     height: 250px;
     width: 200px;
+}
+
+.urna .window-left .window .data .photo .photo-img {
+    border-top: 1px solid;
+    border-left: 1px solid;
+}
+
+.urna .window-left .window .footer {
+    border-top: 1px solid;
+}
+
+.urna .window-left .window .footer .footer-title {
+    margin: 15px 0 0 20px;
+    font-weight: bold;
+}
+
+.urna .window-left .window .footer .footer-info {
+    margin: 5px 0 0 40px;
+    font-weight: bold;
+}
+
+.urna .window-left .window .footer .footer-invalid-candidate {
+    margin: 4%;
+    justify-content: center;
+    text-align: center;
+    font-weight:lighter;
+    font-size: 40px;
+}
+
+.urna .window-left .window .footer .footer-null-vote {
+    margin: 4%;
+    justify-content: center;
+    text-align: center;
+    font-weight:lighter;
+    font-size: 40px;
 }

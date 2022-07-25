@@ -39,8 +39,25 @@
                         <div class="info-item-res" ><span id="party"></span></div>
                     </div>
                     <div class="photo">
-                        <img id="photo" src="" width="150" height="150" style="display: none;">
+                        <img id="photo" width="150" height="150" class="photo-img">
                     </div>
+                </div>
+                <div id="window-left-footer-info" class="footer">
+                    <p class="footer-title">Aperte a tecla:</p>
+                    <div class="footer-info">
+                        <span>VERDE</span>
+                        <span> para CONFIRMAR este voto</span>
+                    </div>
+                    <div class="footer-info">
+                        <span>LARANJA</span>
+                        <span> para REINICAR este voto</span>
+                    </div>
+                </div>
+                <div id="window-left-footer-invalid-candidate" class="footer" style="display: none;">
+                    <p class="footer-invalid-candidate">Candidato inválido</p>
+                </div>
+                <div id="window-left-footer-null-vote" class="footer" style="display: none;">
+                    <p class="footer-null-vote">Voto Nulo</p>
                 </div>
                 
             </div>
@@ -68,7 +85,7 @@
                 </span>
 
                 <span class="span">
-                    <button class="button-nunber" style="margin-left: 33%;" onclick="sound_play(1); insert(0)"><a>0</a></button>
+                    <button class="button-nunber" style="margin-left: 26%;" onclick="sound_play(1); insert(0)"><a>0</a></button>
                 </span>
             </div>
             
